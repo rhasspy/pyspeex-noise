@@ -7,5 +7,9 @@ tmp/
 *.egg
 build
 htmlcov
+*.egg-info/
 
 /.venv/
+/dist/
+/build/
+/*.so
