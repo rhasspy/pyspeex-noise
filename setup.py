@@ -7,7 +7,7 @@ from setuptools import setup
 _DIR = Path(__file__).parent
 _SPEEX_DIR = _DIR / "speex"
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 flags = ["-DFLOATING_POINT", "-DUSE_KISS_FFT"]
 sources = list(_SPEEX_DIR.glob("*.c"))
@@ -17,6 +17,7 @@ ext_modules = [
     Pybind11Extension(
         name="speex_noise_cpp",
         language="c++",
+        cxx_std=17,
         sources=[str(p) for p in sources] + [str(_DIR / "python.cpp")],
         extra_compile_args=flags,
         define_macros=[("VERSION_INFO", __version__)],
