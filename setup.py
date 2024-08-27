@@ -7,10 +7,10 @@ from setuptools import setup
 _DIR = Path(__file__).parent
 _SPEEX_DIR = _DIR / "speex"
 
-__version__ = "1.0.1"
+__version__ = "1.0.2"
 
 flags = ["-DFLOATING_POINT", "-DUSE_KISS_FFT"]
-sources = list(_SPEEX_DIR.glob("*.c"))
+sources = list(_SPEEX_DIR.glob("*.cc"))
 
 
 ext_modules = [
