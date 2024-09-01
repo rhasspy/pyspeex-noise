@@ -31,7 +31,7 @@ setup(
     version=__version__,
     author="Michael Hansen",
     author_email="mike@rhasspy.org",
-    url="https://github.com/rhasspy/speex-noise",
+    url="https://github.com/rhasspy/pyspeex-noise",
     description="Noise suppression and automatic gain with speex",
     long_description="",
     packages=["pyspeex_noise"],
