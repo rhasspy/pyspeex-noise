@@ -20,10 +20,10 @@ jobs:
           python-version: "3.12"
 
       - name: Install cibuildwheel
-        run: python -m pip install cibuildwheel==2.23.2
+        run: python -m pip install cibuildwheel==3.4.1
 
       - name: Build wheels
-        run: python -m cibuildwheel --output-dir wheelhouse
+        run: python -m cibuildwheel --enable pypy --output-dir wheelhouse
         env:
           CIBW_BUILD: "cp39-*"
           CIBW_MANYLINUX_X86_64_IMAGE: manylinux_2_28

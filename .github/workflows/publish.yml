@@ -24,7 +24,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install build tools
-        run: pip install setuptools build cibuildwheel==2.23.2
+        run: pip install setuptools build cibuildwheel==3.4.1
 
       - name: Read version from setup.py & verify tag
         id: read_ver
@@ -56,7 +56,7 @@ jobs:
           print(f"✅ Version OK: tag={tag} matches setup.py={ver}")
 
       - name: Build wheels
-        run: python -m cibuildwheel --output-dir dist
+        run: python -m cibuildwheel --enable pypy --output-dir dist
         env:
           CIBW_BUILD: "cp39-*"
           CIBW_MANYLINUX_X86_64_IMAGE: manylinux_2_28
