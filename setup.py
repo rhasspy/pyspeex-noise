@@ -6,7 +6,7 @@ from setuptools import setup, Extension
 _DIR = Path(__file__).parent
 _SPEEX_DIR = _DIR / "speex"
 
-version = "2.0.0"
+version = "2.0.1"
 
 flags = ["-DFLOATING_POINT", "-DUSE_KISS_FFT"]
 sources = list(_SPEEX_DIR.glob("*.cc"))

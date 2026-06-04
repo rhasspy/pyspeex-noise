@@ -1,2 +1,3 @@
 recursive-include speex *
+recursive-include src *.cpp
 include python.cpp
