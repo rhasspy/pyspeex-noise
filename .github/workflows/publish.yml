@@ -2,6 +2,7 @@
 name: Release (PyPI + GitHub)
 
 on:
+  workflow_dispatch:
   push:
     tags:
       - "v*.*.*" # e.g. v1.2.3
