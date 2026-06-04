@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.1
+
+- Include `src` in sdist
+
 ## 2.0.0
 
 - Change `Process10ms` to `process_10ms`
