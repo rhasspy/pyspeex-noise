@@ -13,7 +13,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, ubuntu-24.04-arm] #, ubuntu-24.04-riscv]
+        os: [ubuntu-latest, ubuntu-24.04-arm, ubuntu-24.04-riscv]
     outputs:
       tag: ${{ steps.read_ver.outputs.tag }}
       file_ver: ${{ steps.read_ver.outputs.file_ver }}
